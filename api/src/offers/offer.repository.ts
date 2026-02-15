@@ -30,6 +30,11 @@ export const offerRepository = {
   findByRequest(requestId: number): Offer[] {
     return offers.filter(o => o.requestId === requestId);
   },
+  create(data: Omit<Offer, 'id'>): Offer {
+    const offer: Offer = { id: nextId++, ...data };
+    offers.push(offer);
+    return offer;
+  },
   updateStatus(id: number, status: Offer['status']): Offer | undefined {
     const index = offers.findIndex(o => o.id === id);
     if (index === -1) return undefined;
