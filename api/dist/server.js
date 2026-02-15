@@ -12,6 +12,7 @@ const service_request_controller_1 = require("./serviceRequests/service-request.
 const auth_controller_1 = require("./auth/auth.controller");
 const carrier_controller_1 = require("./carriers/carrier.controller");
 const carrier_profile_controller_1 = require("./carrierProfile/carrier-profile.controller");
+const support_message_controller_1 = require("./supportMessages/support-message.controller");
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 app.use((0, cors_1.default)());
@@ -26,6 +27,7 @@ app.use('/service-requests', service_request_controller_1.serviceRequestRouter);
 app.use('/carriers', carrier_controller_1.carrierRouter);
 app.use('/auth', auth_controller_1.authRouter);
 app.use('/carrier-profile', carrier_profile_controller_1.carrierProfileRouter);
+app.use('/support-messages', support_message_controller_1.supportMessageRouter);
 app.listen(port, () => {
     console.log(`API Click Cargo ouvindo na porta ${port}`);
 });

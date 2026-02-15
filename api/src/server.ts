@@ -7,6 +7,7 @@ import { serviceRequestRouter } from './serviceRequests/service-request.controll
 import { authRouter } from './auth/auth.controller';
 import { carrierRouter } from './carriers/carrier.controller';
 import { carrierProfileRouter } from './carrierProfile/carrier-profile.controller';
+import { supportMessageRouter } from './supportMessages/support-message.controller';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,6 +26,7 @@ app.use('/service-requests', serviceRequestRouter);
 app.use('/carriers', carrierRouter);
 app.use('/auth', authRouter);
 app.use('/carrier-profile', carrierProfileRouter);
+app.use('/support-messages', supportMessageRouter);
 
 app.listen(port, () => {
   console.log(`API Click Cargo ouvindo na porta ${port}`);
