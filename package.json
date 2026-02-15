@@ -1,0 +1,12 @@
+{
+  "name": "click-cargo-root",
+  "private": true,
+  "scripts": {
+    "start:api": "cd api && npm run dev",
+    "start:web": "cd web && npm start",
+    "start": "concurrently \"npm run start:api\" \"npm run start:web\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
