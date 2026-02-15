@@ -126,6 +126,12 @@ Na pasta `web`:
 - `/cliente/seguro` – Solicitar cotação de seguro
 - `/cliente/personal-organizer` – Solicitar cotação de Personal Organizer
 
+## Manual de uso (roteiro de demo)
+
+Para um passo a passo bem detalhado de apresentação (com sugestões de imagens), consulte o manual completo:
+
+- [MANUAL.md](MANUAL.md)
+
 ## Principais endpoints da API (resumo)
 
 - `GET /health` – Verifica se a API está no ar
@@ -134,6 +140,8 @@ Na pasta `web`:
 - `GET /offers` – Lista de orçamentos recebidos (dados fictícios)
 - `PATCH /offers/:id/status` – Atualiza status de uma oferta (enviado/aceito/recusado)
 - `GET/POST /service-requests` – Solicitações de vistoria, seguro e personal organizer
+ - `GET /carrier-profile` – Perfil da transportadora (plano atual, preço, validade – armazenado em JSON)
+ - `POST /carrier-profile/plan` – Atualiza o plano da transportadora (`free`, `prata`, `ouro`) com pagamento simulado
 
 ## Logo do projeto
 
