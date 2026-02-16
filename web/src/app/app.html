@@ -1,0 +1,30 @@
+<div class="cc-shell">
+  <header class="cc-header">
+    <div class="cc-header-left">
+      <img src="/assets/logo-click-Cargo.jpg" alt="Click & Cargo" class="cc-logo" />
+      <div class="cc-header-text">
+        <h1>Click & Cargo</h1>
+        <span>Conectando clientes e transportadoras</span>
+      </div>
+    </div>
+    <nav class="cc-header-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+
+      <ng-container *ngIf="!currentUser">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+      </ng-container>
+
+      <button *ngIf="currentUser" type="button" class="cc-logout" (click)="logout()">
+        Sair
+      </button>
+    </nav>
+  </header>
+
+  <main class="cc-main">
+    <router-outlet />
+  </main>
+
+  <footer class="cc-footer">
+    <span>Projeto conceito Click & Cargo · MVP demonstrativo</span>
+  </footer>
+</div>
