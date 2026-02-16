@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 export class App {
   currentUser: { name: string; email: string; role: 'client' | 'carrier' } | null = null;
 
-  constructor() {
+  constructor(private router: Router) {
     this.loadUser();
   }
 
@@ -29,6 +29,6 @@ export class App {
     localStorage.removeItem('cc_user');
     localStorage.removeItem('cc_token');
     this.currentUser = null;
-    window.location.href = '/';
+    this.router.navigate(['/']);
   }
 }
