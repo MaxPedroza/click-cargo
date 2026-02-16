@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,12 @@ export class App {
 
   constructor(private router: Router) {
     this.loadUser();
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.loadUser();
+      }
+    });
   }
 
   private loadUser() {
