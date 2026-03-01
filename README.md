@@ -9,8 +9,11 @@ Projeto exemplo para demonstrar o fluxo da plataforma **Click & Cargo**, conecta
 - Frontend: Angular 20
 - Backend: Node.js 18+ + Express + TypeScript (dados em memória, sem banco real)
 
+# Versão Onlie
 https://maxpedroza.github.io/click-cargo/
 
+
+# Versão local
 ## Pré-requisitos
 
 - Node.js 18+ (recomendado)
