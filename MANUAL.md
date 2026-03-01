@@ -6,6 +6,11 @@ Ele foi pensado para que qualquer pessoa consiga rodar o sistema localmente e se
 
 ---
 
+# Versão Online
+https://maxpedroza.github.io/click-cargo/
+
+# Versão Local
+
 ## 1. Como rodar o projeto
 
 > Para instruções completas de instalação, consulte também o arquivo `README.md` na raiz do projeto.
